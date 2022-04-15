@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/rjkokko/react-resume-component.git"
+    "url" : "https://github.com/myedibleenso/react-resume-component.git"
   },
   "main": "build/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "react": "^16.5.1",
+    "react": "^17.0.2",
     "typography": "^0.16.17",
     "webpack": "^4.19.0"
   },
