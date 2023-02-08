@@ -83,13 +83,16 @@ class Resume extends Component {
               Experience
             </h2>
             {this.props.experiences.map(job => {
+              const profId = job.company.replace(/[\s.!?'"]+/g, '-').toLowerCase() + "-" + job.title.replace(/[\s.!?'"]+/g, '-').toLowerCase();
               return (
-                <div className="subsection" key={job.company + job.title} id={job.company.replace(/[\s.!?'"]+/g, '-').toLowerCase() + "-" + job.replace(/[\s.!?'"]+/g, '-').toLowerCase()}>
-                  <h3>
-                    {job.title}
-                    <span id="company">{job.company}</span>
-                    <span>{job.period}</span>
-                  </h3>
+                <div className="subsection" key={job.company + job.title}>
+                  <a id={profId} href={"#" + profId}>
+                    <h3>
+                      {job.title}
+                      <span id="company">{job.company}</span>
+                      <span>{job.period}</span>
+                    </h3>
+                  </a>
                   <div className="description">{job.description}</div>
                 </div>
               );
